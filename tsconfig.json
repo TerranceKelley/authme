@@ -11,6 +11,6 @@
     "esModuleInterop": true,
     "noEmit": false
   },
-  "include": ["src/module.ts"],
-  "exclude": ["node_modules", "dist", "src/runtime"]
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules", "dist", "src/runtime/**"]
 }
