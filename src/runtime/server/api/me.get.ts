@@ -1,3 +1,5 @@
+import { createError, defineEventHandler } from 'h3'
+
 export default defineEventHandler((event) => {
   const user = event.context.user
   if (!user) {
