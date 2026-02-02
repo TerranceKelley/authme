@@ -5,21 +5,28 @@
   "type": "module",
   "exports": {
     ".": {
-      "types": "./src/module.ts",
-      "import": "./src/module.ts"
+      "types": "./dist/module.d.ts",
+      "import": "./dist/module.js",
+      "default": "./dist/module.js"
     }
   },
-  "main": "./src/module.ts",
-  "types": "./src/module.ts",
+  "main": "./dist/module.js",
+  "types": "./dist/module.d.ts",
   "files": [
+    "dist",
     "src"
   ],
-  "scripts": {},
+  "scripts": {
+    "build": "tsc && cp -r src/runtime dist/"
+  },
   "peerDependencies": {
     "nuxt": "^3.0.0"
   },
   "dependencies": {
     "@nuxt/kit": "^3.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.0"
   },
   "license": "MIT"
 }
