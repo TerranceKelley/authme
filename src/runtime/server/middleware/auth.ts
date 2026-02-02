@@ -3,6 +3,7 @@ import type { H3Event } from 'h3'
 import type { User } from '../../types'
 
 export default defineEventHandler((event: H3Event) => {
+  if (!event.context) event.context = {}
   const remoteUser = getHeader(event, 'remote-user')
   const remoteEmail = getHeader(event, 'remote-email')
   const remoteName = getHeader(event, 'remote-name')
