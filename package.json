@@ -1,0 +1,25 @@
+{
+  "name": "authme",
+  "version": "0.1.0",
+  "description": "Nuxt module that sets event.context.user from Authelia/Caddy forward-auth headers and provides useUser() and GET /api/me",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./src/module.ts",
+      "import": "./src/module.ts"
+    }
+  },
+  "main": "./src/module.ts",
+  "types": "./src/module.ts",
+  "files": [
+    "src"
+  ],
+  "scripts": {},
+  "peerDependencies": {
+    "nuxt": "^3.0.0"
+  },
+  "dependencies": {
+    "@nuxt/kit": "^3.0.0"
+  },
+  "license": "MIT"
+}
